@@ -1,0 +1,68 @@
+!!!
+%html
+  %head
+    %title= CONFIG['title']
+    %meta{ charset: 'utf-8' }
+    != stylesheet('main.scss')
+    != javascript('libs/underscore-min.js')
+    != javascript('libs/jquery-3.1.1.min.js')
+    :javascript
+      window.Game = { config: JSON.parse('#{ JSON.generate(CONFIG) }') };
+    != javascript('game.js')
+    != javascript('handlers.js')
+    != javascript('main.js')
+  %body
+
+    %div#title.panel
+      %h1
+        %span.title= CONFIG['title']
+        %span.subtitle
+
+    - CONFIG['rounds'].each_with_index do |round, round_index|
+      - final = CONFIG['final_question'] && round_index == CONFIG['rounds'].length - 1
+      %div.round{ data: {round: round_index } }
+
+        %div.panel.play.start
+          %h1= final ? 'Final Question' : round['name']
+
+        - if final
+          %div.panel.play.final
+            %h1 Category:
+            %h1.final-category
+
+        - else
+          %div.panel.play.grid
+            %div.close
+              %a{ title: 'End this round early' } E
+            %table
+              %tr
+                - round['categories'].each do |category|
+                  %th= category['name']
+              - round['points'].each_with_index do |points, points_index|
+                %tr
+                  - round['categories'].each_with_index do |category, category_index|
+                    %td.points.active{ data: { round: round_index, category: category_index, points: points_index } }
+                      %span= points
+
+        %div.panel.play.qa
+          .qa-title
+          .qa-question
+          .qa-answer
+
+        %div.panel.play.double
+          %h1 DAILY DOUBLE
+
+    %div#end.panel
+      %h1 Game Over
+
+    %div#scores.panel
+      %table
+        %tbody
+          %tr
+            - CONFIG['teams'].each_with_index do |team, i|
+              %td.team-score{ data: { team: i } }
+                .team
+                  %a.minus{ data: { team: i } } &minus;
+                  = team
+                  %a.plus{ data: { team: i } } &plus;
+                .score 0

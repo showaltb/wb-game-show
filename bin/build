@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+require 'bundler'
+Bundler.require
+
+require 'yaml'
+require 'json'
+require 'erb'
+
+CONFIG = YAML.load_file('config/game.yml')
+
+# given a path to a .scss file (relative to src/scss), run the file through
+# ERB and then through SASS, returning generated content
+def stylesheet(path)
+  source = IO.read(File.join('src/scss', path))
+  scss = erb(source)
+  engine = Sass::Engine.new(scss, syntax: :scss)
+  css = engine.render
+  %(<style type="text/css">#{css}</style>)
+end
+
+def javascript(path)
+  source = IO.read(File.join('src/js', path))
+  %(<script type="text/javascript">#{source}</script>)
+end
+
+def erb(source)
+  b = binding
+  ERB.new(source).result(b)
+end
+
+layout = IO.read('src/game.haml')
+engine = Haml::Engine.new(layout, escape_html: true)
+puts engine.render

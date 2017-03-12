@@ -1,0 +1,244 @@
+$body-bg-color: #5050E0;
+$body-font-family: Arial,Helvetica;
+
+$title-height: 8vh;
+
+$scores-height: 12vh;
+$score-width: <%= 98 / CONFIG['teams'].length - 1 %>vw;
+$score-team-font-size: 2.5vh;
+$score-score-font-size: 4vh;
+
+$play-height: 100vh - $title-height - $scores-height - 2;
+$play-bg-color: #0000AA;
+
+$grid-hmargin: 2vw;
+$grid-vmargin: 2vh;
+$grid-cell-hmargin: 2vw;
+$grid-cell-vmargin: 2vh;
+$grid-header-height: 5vh;
+$grid-header-font-size: 2.5vh;
+$grid-cell-width: (98vw - 2 * $grid-hmargin) / <%= CONFIG['rounds'][0]['categories'].length %>;
+$grid-cell-height: ($play-height - $grid-header-height - 2 * $grid-vmargin) / <%= CONFIG['rounds'][0]['points'].length %> - $grid-cell-vmargin;
+$grid-cell-bg-color: $body-bg-color;
+$grid-cell-hover-color: #7070FF;
+$grid-cell-font-size: 4vh;
+
+$daily-double-font-size: 12vh;
+$daily-double-color: #FFEE00;
+
+$qa-title-font-size: 2.5vh;
+$qa-question-font-size: 7vh;
+$qa-answer-font-size: 7vh;
+$qa-answer-color: #FFEE00;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $body-bg-color;
+  color: white;
+  font-family: $body-font-family;
+  font-size: 2.5vh;
+}
+
+div.panel {
+  width: 98vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+div#title {
+
+  height: $title-height;
+  margin-top: 1vh;
+
+  h1 {
+    margin: 0;
+    font-size: $title-height * 0.5;
+  }
+
+}
+
+div.play, div#end {
+
+  flex-direction: column;
+  height: $play-height;
+  background-color: $play-bg-color;
+
+}
+
+div.play.start {
+  cursor: pointer;
+}
+
+div.play.double {
+  cursor: pointer;
+  h1 {
+    font-size: $daily-double-font-size;
+    color: $daily-double-color;
+  }
+}
+
+div.play.final {
+  cursor: pointer;
+}
+
+div.play.qa {
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .qa-title {
+    font-size: $qa-title-font-size;
+  }
+
+  .qa-question {
+    text-align: center;
+    font-size: $qa-question-font-size;
+    margin: 5vh 5vw;
+  }
+
+  .qa-answer {
+    text-align: center;
+    font-size: $qa-answer-font-size;
+    color: $qa-answer-color;
+    margin: 5vh 5vw;
+  }
+}
+
+div.play.grid {
+  flex-direction: column;
+  justify-content: center;
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    text-align: right;
+
+    a {
+      cursor: pointer;
+      padding: 2px;
+      display: none;
+    }
+
+    &:hover {
+      a {
+        display: inline;
+      }
+    }
+  }
+
+  table {
+
+    border-collapse: separate;
+    border-spacing: $grid-cell-hmargin $grid-cell-vmargin;
+
+    th, td {
+      width: $grid-cell-width;
+    }
+
+    th {
+      height: $grid-header-height;
+      font-size: $grid-header-font-size;
+    }
+
+    td.points {
+      height: $grid-cell-height;
+      font-size: $grid-cell-font-size;
+      background-color: $grid-cell-bg-color;
+
+      span {
+        display: none;
+      }
+
+      &.active {
+        cursor: pointer;
+        span {
+          display: block;
+        }
+        &:hover {
+          background-color: $grid-cell-hover-color;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+div#end {
+  display: none;
+}
+
+body[data-mode=end] div#end {
+  display: flex;
+}
+
+div#scores {
+
+  height: $scores-height;
+
+  div.team {
+    font-size: $score-team-font-size;
+    margin-bottom: .5vh;
+
+    a {
+      //font-size: $score-team-font-size * 0.7;
+      cursor: pointer;
+      background-color: #EEE;
+      padding: 0 2px;
+      display: none;
+    }
+
+    a.plus {
+      color: green;
+      margin-left: 3px;
+    }
+
+    a.minus, span.score.minus {
+      color: red;
+      margin-right: 3px;
+    }
+
+    &:hover {
+      a {
+        display: inline;
+      }
+    }
+  }
+
+  div.score {
+    font-size: $score-score-font-size;
+    width: $score-width;
+    background-color: white;
+    color: blue;
+    padding: .75vh 0;
+    margin: 0 .5vw;
+
+    &.minus {
+      color: red;
+    }
+  }
+
+}
+
+body[data-mode=answer] div#scores div.team a {
+  display: inline;
+}
+
+table {
+
+  border-collapse: collapse;
+
+  th, td {
+    padding: 0;
+    text-align: center;
+  }
+
+}

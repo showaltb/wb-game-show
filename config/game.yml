@@ -1,0 +1,245 @@
+---
+
+title:
+  Wood Badge Game Show
+
+teams:
+  - Beaver
+  - Bobwhite
+  - Eagle
+  - Fox
+  - Owl
+  - Bear
+  - Buffalo
+  - Antelope
+
+# if true, the last round will be handled as a "final question". if false, last
+# round is a normal round.
+final_question: true
+
+rounds:
+
+  - name: Round One
+    points: [100, 200, 300, 400]
+    daily_doubles: 1
+    categories:
+      - name: Cub Scouting
+        questions:
+          - q: What is the Cub Scout motto?
+            a: Do Your Best
+          - q: What is the minimum amount of time that a boy needs to be active as a Webelos Scout before he can earn the Webelos badge?
+            a: No minimum
+          - q: How many years must a den leader serve before he/she can earn the Den Leader Training Award?
+            a: One
+          - q: Which Cub Scout adventure is required at each rank?
+            a: A Duty to God adventure
+      - name: Boy Scouting
+        questions:
+          - q: Is a troop guide a member of the patrol leaders’ council?
+            a: "Yes"
+          - q: What rank is the goal of the Boy Scouts of America that every Scout should earn?
+            a: First Class
+          - q: What is the proper way for a Boy Scout to salute the flag when he is out of uniform?
+            a: Stand at attention with the right hand over the heart.
+          - q: If the Scouts in a troop wear a neckerchief, are the adult leaders allowed to do so as well?
+            a: "Yes"
+      - name: Varsity Scouting
+        questions:
+          - q: What is a Varsity Scout unit called?
+            a: Team
+          - q: What ages are boys in Varsity Scouting?
+            a: Ages 14 to 18
+          - q: In addition to the Varsity Letter, what award can be earned only by Varsity Scouts?
+            a: Denali Award
+          - q: Name two of the five fields of emphasis in Varsity Scouting.
+            a: Service, High Adventure and Sports, Personal Development, Advancement, and Special Programs and Events
+      - name: Venturing
+        questions:
+          - q: What is the first advancement award specific to the Venturing program that a Venturer may earn?
+            a: Venturing Award
+          - q: Venturing crews can be made up of three different gender groupings. What are they?
+            a: All male, all female, and co-ed
+          - q: Can a Venturer be elected to the Order of the Arrow by the rest of the crew?
+            a: No, but they can be members if they were elected in their troop.
+          - q: What parts of the Venturing uniform must be worn by all members of a particular Venturing crew?
+            a: Each crew sets its own standards for the uniforms its members will wear.
+      - name: Districts
+        questions:
+          - q: Can a district identification patch or district insignia be worn on a BSA uniform?
+            a: No. (According to the Guide to Awards and Insignia, districts are “operational arms” of a council. No district identification or insignia is to be worn on the official uniform.)
+          - q: Who does the district commissioner “work” for?
+            a: The council commissioner. Insofar as status, progress, etc., he/she reports to the district chairperson.
+          - q: Who make up the Key 3 in a district?
+            a: District executive, district chairperson, and district commissioner
+          - q: Who directly represents the district to an individual Scouting unit?
+            a: The unit commissioner
+      - name: Training
+        questions:
+          - q: What is the first training any adult leader should receive in Scouting?
+            a: Youth Protection
+          - q: Who is responsible for making sure that training occurs within a district?
+            a: The district training chairperson
+          - q: What is the only training award of the Scouting movement that is the same in every country where it is awarded?
+            a: Wood Badge
+          - q: Name the award that a Scoutmaster can earn after three years as a Scoutmaster and meeting additional requirements.
+            a: Scouter’s Key
+      - name: Leadership
+        questions:
+          - q: What is the totem of Gilwell Park?
+            a: The ax and log
+          - q: Baden-Powell believed that Scouting was a game with what?
+            a: A purpose
+          - q: What is the Mission Statement of the Boy Scouts of America?
+            a: to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Law.
+          - q: What are three characteristics of a vision?
+            a: Engages the heart and spirit, leads toward a worthwhile goal, gives meaning to an effort, is simple, is attainable, can change.
+
+  - name: Round Two
+    points: [100, 200, 300, 400]
+    daily_doubles: 1
+    categories:
+      - name: Cub Scouting
+        questions:
+          - q: How many adventures must a boy complete to earn his Tiger rank?
+            a: Seven
+          - q: Who is Akela?
+            a: A boy’s leader
+          - q: What does “Webelos” mean?
+            a: We’ll be loyal Scouts.
+          - q: What colors are in the recognition knot for the Den Leader Training Award?
+            a: Gold knot on a blue background
+      - name: Boy Scouting
+        questions:
+          - q: Name the four uniform items that must be worn for a Scout to be in proper or complete uniform.
+            a: Shirt, pants or shorts, belt, socks
+          - q: From whom should a Boy Scout receive his first troop and patrol leadership training?
+            a: His Scoutmaster and senior patrol leader deliver Introduction to Leadership Skills for Troops.
+          - q: How many merit badges must an Eagle Scout earn to wear both a Silver Palm and a Bronze Palm on his Eagle Scout Award?
+            a: 41 (21 for Eagle Scout rank, 15 for the Silver Palm, and five for the Bronze Palm)
+          - q: What do the two stars stand for on the First Class badge?
+            a: Truth and knowledge
+      - name: Varsity Scouting
+        questions:
+          - q: What is the adult leader of a Varsity Scout team called?
+            a: Coach
+          - q: Which members of a Varsity Scout team participate in a team planning meeting?
+            a: All members of the team
+          - q: A Varsity Scout team is broken down into smaller groups of Varsity Scouts. What are these groups called?
+            a: Squads
+          - q: Name the two major youth awards that are unique to Varsity Scouting.
+            a: Denali Award, Varsity Letter
+      - name: Venturing
+        questions:
+          - q: How many of the core requirements must be earned for the Ranger Award?
+            a: Eight
+          - q: Can a Venturer holding the rank of Second Class Scout earn his Eagle Scout Award while a member of a Venturing crew?
+            a: No (He must be a First Class Scout.)
+          - q: What are the youth awards that are unique to Venturing?
+            a: Venturing Award, Discovery Award, Pathfinder Award, Summit Award, TRUST Award, Ranger Award, Quest Award
+          - q: What are the four areas of emphasis in the Venturing program model?
+            a: Adventure, leadership, personal growth, and service
+      - name: Districts
+        questions:
+          - q: Is a chartered organization representative a voting member of his or her council?
+            a: "Yes"
+          - q: Who should coordinate a districtwide pinewood derby runoff?
+            a: District activities chairperson/subcommittee
+          - q: If the district chairperson is absent and has not made other arrangements, who runs a district committee meeting?
+            a: The district commissioner
+          - q: Who appoints a den chief?
+            a: The senior patrol leader (with approval from the den leader and Cubmaster of the pack)
+      - name: Training
+        questions:
+          - q: A professional Scouter (that is, someone employed by Scouting) may earn the Professional Training Award. What colors are in the recognition knot for this award?
+            a: Black and white (a black knot on a white background)
+          - q: Within a Scouting unit, what person ensures that all adult leaders receive the appropriate training awards and recognitions?
+            a: The committee chairperson
+          - q: Is Wood Badge considered advanced leadership training?
+            a: "Yes"
+          - q: What training awards are required for a Scouter to be eligible for the Silver Beaver Award?
+            a: None
+      - name: Leadership
+        questions:
+          - q: The kudu is an animal native to what continent?
+            a: Africa
+          - q: The Wood Badge presentation on “Listening to Learn” discussed two kinds of effective listening. One was active listening. What was the other?
+            a: Empathetic listening
+          - q: The Wood Badge presentation on “Communication” noted that Aristotle broke down communication into what three parts?
+            a: A sender, a message, a receiver
+          - q: What are the four S’s of a successful campfire program?
+            a: Songs, Stunts, Stories, Showmanship
+
+  - name: Round Three
+    points: [100, 200, 300, 400]
+    daily_doubles: 1
+    categories:
+      - name: Cub Scouting
+        questions:
+          - q: What is the name of the BSA book that contains successful ideas to add sparkle to den and pack activities?
+            a: Cub Scout Leader How-To Book
+          - q: Regardless of his age, what is the first rank a Cub Scout earns when he joins the Cub Scout program?
+            a: Bobcat
+          - q: Four awards that a Cub Scout or a den can earn include a requirement for outdoor activity or service. Name two of these awards.
+            a: National Summertime Pack Award, Cub Scout World Conservation Award, National Den Award, Outdoor Activity Award
+          - q: Who appears as a mentor in each of the Cub Scout youth handbooks?
+            a: Ethan
+      - name: Boy Scouting
+        questions:
+          - q: On the Boy Scout length-of-service pin, what color is the plastic backing?
+            a: Green
+          - q: According to the Boy Scout Handbook, what factor determines whether the members of a troop wear their neckerchiefs over the collars of their shirts, or under their collars?
+            a: It depends on the custom of the troop.
+          - q: When can a Boy Scout in complete uniform wear his Order of the Arrow sash and merit badge sash simultaneously?
+            a: Never
+          - q: Patrol members wearing a small star segment beneath their patrol emblems have earned what award?
+            a: The National Honor Patrol Award
+      - name: Varsity Scouting
+        questions:
+          - q: Can a Varsity Scout be a member of the Order of the Arrow?
+            a: "Yes"
+          - q: Can a boy who is a Varsity Scout be registered in a Boy Scout troop at the same time?
+            a: "Yes"
+          - q: On the Varsity Scout length-of-service pin, what color is the plastic backing?
+            a: Brown
+          - q: Can Varsity Scouts participate in co-ed activities?
+            a: "Yes"
+      - name: Venturing
+        questions:
+          - q: What kind of service project is required for a Venturer to become a Ranger?
+            a: Conservation
+          - q: Which Venturing award encourages Venturers to adopt a healthy and active lifestyle?
+            a: Quest Award
+          - q: Who nominates the Venturing Advisor for the Unit Leader Award of Merit?
+            a: The crew committee and crew president
+          - q: What award can be presented by councils, areas, regions, or the BSA National Council to Venturers who have made exceptional contributions to Venturing?
+            a: Venturing Leadership Award
+      - name: Districts
+        questions:
+          - q: Can members of a patrol have a different logo or design on their neckerchiefs as long as the necker- chiefs are the same color as those of the rest of the troop?
+            a: "Yes"
+          - q: How many medals (not recognition knots) may be worn on the official uniform at any one time?
+            a: Five
+          - q: What award can a Scouter receive for a donation of $1,000 to the BSA through his/her council?
+            a: The James E. West Award
+          - q: At what level of Scouting is the District Award of Merit presented?
+            a: The district or the council
+      - name: Training
+        questions:
+          - q: In a chart of troop leadership positions, to whom do the troop scribe and librarian report?
+            a: Assistant senior patrol leader
+          - q: To become a junior assistant Scoutmaster, how old must a Scout be?
+            a: 16 years of age
+          - q: What do the initials S. S. stand for in the name Robert S. S. Baden-Powell?
+            a: Stephenson Smyth
+          - q: What do the initials S. S. stand for in the name Robert S. S. Baden-Powell?
+            a: Stephenson Smyth
+      - name: Leadership
+        questions:
+          - q: How many goals are there on a Wood Badge ticket?
+            a: Five
+          - q: A team’s stage of development can be determined by measuring what two aspects of that team?
+            a: Productivity and morale
+          - q: What are the four stages of team development?
+            a: Forming, Storming, Norming, Performing
+          - q: What are the BSA’s four steps to advancement?
+            a: A youth learns; a youth is tested; a youth is reviewed; a youth is recognized.
