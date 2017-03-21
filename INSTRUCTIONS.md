@@ -14,6 +14,10 @@ from the 2016 Wood Badge Syllabus:
   during play.
 * Up to eight teams, named for the standard Wood Badge patrols.
 
+> Note: The answer to "Cub Scouting for 200" in Round One in the
+> syllabus appears to be incorrect. This has been changed to what we
+> believe is the correct answer, "Three months".
+
 The game is designed to used during a Wood Badge course, with the game
 board projected on a large screen that everyone can see.
 
@@ -118,7 +122,7 @@ The game is designed to be hard to accidentally restart. The back button
 will navigate back through the steps of the game. Reloading the page
 will maintain the current game state.
 
-If you do need to restore the game, you can either:
+If you do need to restart the game, you can either:
 
 * Close your browser window and restart using the "Starting the Game"
   procedure above, or
