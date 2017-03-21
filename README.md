@@ -8,6 +8,10 @@ If you just want to play the game, load
 [wb-game-show.html](wb-game-show.html) in your browser. See
 [INSTRUCTIONS.md](INSTRUCTIONS.md) for detailed gameplay instructions.
 
+> Note: The answer to "Cub Scouting for 200" in Round One in the
+> syllabus appears to be incorrect. This has been changed to what we
+> believe is the correct answer, "Three months".
+
 ## Building the Game
 
 Building the game requires Ruby 2.3 and Bundler. To setup:

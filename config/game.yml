@@ -28,7 +28,7 @@ rounds:
           - q: What is the Cub Scout motto?
             a: Do Your Best
           - q: What is the minimum amount of time that a boy needs to be active as a Webelos Scout before he can earn the Webelos badge?
-            a: No minimum
+            a: Three months
           - q: How many years must a den leader serve before he/she can earn the Den Leader Training Award?
             a: One
           - q: Which Cub Scout adventure is required at each rank?
