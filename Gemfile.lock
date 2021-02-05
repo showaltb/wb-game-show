@@ -4,10 +4,12 @@ GEM
     awesome_print (1.7.0)
     filewatcher (0.5.4)
       trollop (~> 2.0)
-    haml (4.0.7)
+    haml (5.0.0)
+      temple (>= 0.8.0)
       tilt
     sass (3.4.23)
-    tilt (2.0.6)
+    temple (0.8.2)
+    tilt (2.0.10)
     trollop (2.1.2)
 
 PLATFORMS
