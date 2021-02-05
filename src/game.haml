@@ -7,7 +7,7 @@
     != javascript('libs/underscore-min.js')
     != javascript('libs/jquery-3.1.1.min.js')
     :javascript
-      window.Game = { config: JSON.parse('#{ JSON.generate(CONFIG) }') };
+      window.Game = { config: #{ JSON.dump(CONFIG) } };
     != javascript('game.js')
     != javascript('handlers.js')
     != javascript('main.js')
