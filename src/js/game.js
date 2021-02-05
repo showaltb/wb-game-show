@@ -212,7 +212,7 @@
       title = '';
     }
     $play.find('.qa-title').html(title);
-    $play.find('.qa-question').html(_.escape(question.q));
+    $play.find('.qa-question').html(_.escape(question.q).replace(/\n/g,"<br>").replace(/^pic!(.*)$/,"<img src='$1'>"));
     if (with_answer) {
       $play.find('.qa-answer').html(_.escape(question.a));
     }
